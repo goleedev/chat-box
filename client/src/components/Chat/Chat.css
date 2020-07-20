@@ -1,0 +1,160 @@
+/* Chat */
+.chat__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Mark Pro" !important;
+    background-color: #cbeaed;
+    color: #242424 !important;
+}
+
+.chat__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 60%;
+    width: 35%;
+    box-shadow:  3px 3px 2px #242424;
+}
+
+.chat__header {
+    width: 100%;
+    text-align: center;
+    color: #242424 !important;
+    background-color: #ffffdd;
+}
+
+.chat__header h2 {
+    font-family: "Mark Pro Heavy";
+    vertical-align: middle;
+    padding: 0;
+    position: relative;
+    left: -2% !important;
+}
+
+.chat__back {
+    vertical-align: middle;
+    float: left;
+    position: relative;
+    top: 30%;
+    text-decoration: none;
+    align-content: center;
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+
+/* Message Bar */
+.send {
+    color: #242424 !important;
+    font-family: "Mark Pro Medium";
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffdd;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    width: 20%;
+}
+
+.chat__form {
+    display: flex;
+    border-top: 2px solid #FFD437;
+}
+
+#chat__info {
+    border: none;
+    border-radius: 0;
+    padding: 2%;
+    width: 80%;
+    font-size: 1.2em;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+/* Messages */
+.messages {
+    padding: 5% 0;
+    overflow: auto;
+    flex: auto;
+}
+
+.messageBox {
+    background: #F3F3F3;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: white;
+    display: inline-block;
+    max-width: 80%;
+}
+  
+.messageText {
+    width: 100%;
+    letter-spacing: 0;
+    float: left;
+    font-size: 1.1em;
+    word-wrap: break-word;
+}
+
+.messageContainer {
+display: flex;
+justify-content: flex-end;
+padding: 0 5%;
+margin-top: 3px;
+}
+
+.sentText {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    color: #828282;
+    letter-spacing: 0.3px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.justifyStart {
+    justify-content: flex-start;
+}
+
+.justifyEnd {
+    justify-content: flex-end;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.colorDark {
+    color: #353535;
+}
+
+.backgroundYellow {
+    background: #FFD437;
+}
+
+.backgroundLight {
+    background: #cbeaed;
+}
+
+/* Text Container */
+.activeContainer {
+    align-items: left;
+    float: left;
+    color: #242424;
+}
+  
+.activeItem {
+    display: flex;
+    align-items: center;
+}

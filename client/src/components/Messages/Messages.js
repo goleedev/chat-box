@@ -2,13 +2,13 @@ import React from 'react';
 import ScrollToBottom from 'react-scroll-to-bottom';
 import Message from './Message/Message';
 
-function Messages({ messages, userName }) {
+function Messages({ messages, name }) {
     return (
         <div>
-            <ScrollToBottom>
+            <ScrollToBottom className="messages">
                 {messages.map((message, i) => 
                     <div key={i}>
-                        <Message message={message} userName={userName} />
+                        <Message message={message} name={name} />
                     </div>
                 )}
            </ScrollToBottom> 

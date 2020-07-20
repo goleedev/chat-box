@@ -16,7 +16,7 @@ function InputMsg({setMessage, sendMessage, message}) {
 
     return (
         <div>
-            <Form>
+            <Form className="chat__form">
                 <Input
                     type="text"
                     name="inputmsg"

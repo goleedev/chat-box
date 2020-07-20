@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import io from "socket.io-client";
 import queryString from 'query-string';
+import { Link } from 'react-router-dom';
 
 import InputMsg from '../InputMsg/InputMsg';
 import TextContainer from '../TextContainer/TextContainer';
@@ -10,21 +11,21 @@ import './Chat.css';
 let socket;
 
 function Chat({ location }) {
-    const [userName, setUserName] = useState('');
+    const [name, setName] = useState('go');
     const [room, setRoom] = useState('JavaScript');
     const [users, setUsers] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
-    const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
+    const ENDPOINT = 'localhost:5000';
 
     useEffect(() => {
-        const { userName, room } = queryString.parse(location.search);
+        const { name, room } = queryString.parse(location.search);
         socket = io(ENDPOINT);
         
         setRoom(room);
-        setUserName(userName);
+        setName(name);
 
-        socket.emit('join', { userName, room }, (error) => {
+        socket.emit('join', { name, room }, (error) => {
             if (error) {
                 alert(error)
             }
@@ -50,10 +51,18 @@ function Chat({ location }) {
     };
 
     return (
-        <div>
-            <TextContainer users={users} />
-            <Messages messages={messages} userName={userName} />
-            <InputMsg message={message} setMessage={setMessage} sendMessage={sendMessage} />
+        <div className="chat__container">
+            <div className="chat__inner">
+                <div className="chat__header">
+                    <Link className="chat__back" to="/">
+                        <span>🔙</span>
+                    </Link>
+                    <h2>#{room}</h2>
+                </div>
+                <TextContainer users={users} />
+                <Messages messages={messages} name={name} />
+                <InputMsg message={message} setMessage={setMessage} sendMessage={sendMessage} />
+            </div>
         </div>
     )
 }
