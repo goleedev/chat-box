@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: "Mark Pro" !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     background-color: #cbeaed;
     color: #242424 !important;
 }
@@ -27,7 +28,8 @@
 }
 
 .chat__header h2 {
-    font-family: "Mark Pro Heavy";
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900; 
     vertical-align: middle;
     margin: 20px auto;
     padding: 0;
@@ -50,7 +52,8 @@
 /* Message Bar */
 .send {
     color: #242424 !important;
-    font-family: "Mark Pro Medium";
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
     background: #ffffdd;
@@ -82,7 +85,7 @@
 
 .messageBox {
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 0 15px;
     display: inline-block;
     max-width: 80%;
 }
@@ -154,6 +157,7 @@
     margin: 20px auto;
     padding: 0 15px;
     text-align: center;
+    font-weight: 500;
     background-color:#FFD437;
 }
 

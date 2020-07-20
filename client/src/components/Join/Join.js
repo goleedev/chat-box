@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Form, Button, InputGroup, Input, FormGroup, Label } from 'reactstrap';
 import Typing from 'react-typing-animation';
 
+import './Join.css'
+
 function Join() {
     //Use state for username & room
     const [userName, setUserName] = useState('');
@@ -36,10 +38,13 @@ function Join() {
     return (
         <div>
             {/* Join Page Title */}
-            <Typing className="join__title" loop={true} speed={180}>
-                <h1>Wanna Chat?</h1>
-                <Typing.Backspace speed={120} delay={12} count={11} />
-            </Typing>
+            <div>
+                <Typing className="join__title" loop={true} speed={180}>
+                    <h1>Wanna Chat?</h1>
+                    <Typing.Backspace speed={120} delay={12} count={12} />
+                    <Typing.Reset count={1} delay={100} />
+                </Typing>
+            </div>
             {/* Join Page Form */}
             <Form className="join__box">
                 <Label for="userNameSelect">Username</Label>

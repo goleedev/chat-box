@@ -8,6 +8,7 @@ const InputMsg = ({setMessage, sendMessage, message}) => (
             name="inputmsg"
             id="chat__info"
             value={message}
+            autocomplete="off"
             onChange={({ target: { value } }) => setMessage(value)}
             onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
             placeholder="Type Here..." />
