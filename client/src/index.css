@@ -1,0 +1,82 @@
+/* General Settings */
+body {
+  margin: 0;
+  color: #242424;
+  font-size: 1rem;
+  font-family: "Mark Pro";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  scroll-behavior:smooth;
+  background-color: #ffffdd !important;
+}
+
+::-moz-selection {
+  background: #FFD437 !important;
+  color: #444452 !important;
+}
+::selection {
+  background: #FFD437 !important;
+  color: #444452 !important;
+}
+
+/* Join Page */
+.join__box {
+  width: 30vw;
+  height: 35vh;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 20px 0;
+  border: none !important;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow:  3px 3px 2px #242424;
+}
+
+.join__box input,
+.join__box select {
+  width: 80%;
+  height: 30px !important;
+  padding: 0;
+  margin: 20px auto;
+}
+
+.join__box button {
+  width: 80%;
+  height: 40px;
+  font-family: "Mark Pro Medium";
+  font-size: 1.2rem;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: #cbeaed;
+  border: none !important;
+  margin: 30px 0;
+}
+
+.join__box label {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Mark Pro Medium";
+  background-color: #FFD437;
+  padding: 0 5px;
+}
+
+.join__title {
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Mark Pro Heavy";
+  font-size: 4rem;
+  text-shadow: 5px 5px 2px #FFD437;
+}
