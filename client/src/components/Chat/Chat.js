@@ -20,48 +20,51 @@ function Chat({ location }) {
 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
+    
         socket = io(ENDPOINT);
-        
+    
         setRoom(room);
-        setName(name);
-
+        setName(name)
+    
         socket.emit('join', { name, room }, (error) => {
-            if (error) {
-                alert(error)
-            }
+          if(error) {
+            alert(error);
+          }
         });
-    }, [ENDPOINT, location.search]);
-
-    useEffect(() => {
+      }, [ENDPOINT, location.search]);
+      
+      useEffect(() => {
         socket.on('message', message => {
-            setMessages(messages => [...messages, message])
+          setMessages(messages => [ ...messages, message ]);
         });
-
-        socket.on('roomData', ({ users }) => {
-            setUsers(users)
+        
+        socket.on("roomData", ({ users }) => {
+          setUsers(users);
         });
     }, []);
-
-    const sendMessage = (e) => {
-        e.preventDefault();
-
-        if (message) {
-            socket.emit('sendMesage', message, () => setMessage(''))
+    
+      const sendMessage = (event) => {
+        event.preventDefault();
+    
+        if(message) {
+          socket.emit('sendMessage', message, () => setMessage(''));
         }
-    };
+      }
 
     return (
-        <div className="chat__container">
-            <div className="chat__inner">
-                <div className="chat__header">
-                    <Link className="chat__back" to="/">
-                        <span>🔙</span>
-                    </Link>
-                    <h2>#{room}</h2>
+        <div>
+            <div className="chat__container">
+            <TextContainer users={users} />
+                <div className="chat__inner">
+                    <div className="chat__header">
+                        <Link className="chat__back" to="/">
+                            <span>🔙</span>
+                        </Link>
+                        <h2>#{room}</h2>
+                    </div>
+                    <Messages messages={messages} name={name} />
+                    <InputMsg message={message} setMessage={setMessage} sendMessage={sendMessage} />
                 </div>
-                <TextContainer users={users} />
-                <Messages messages={messages} name={name} />
-                <InputMsg message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>
         </div>
     )

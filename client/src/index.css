@@ -31,6 +31,14 @@ html {
   color: #444452 !important;
 }
 
+input:focus, button:focus, select:focus{
+  outline: none;
+}
+
+input, button, select {
+  cursor: pointer;
+}
+
 /* Join Page */
 .join__box {
   width: 30vw;

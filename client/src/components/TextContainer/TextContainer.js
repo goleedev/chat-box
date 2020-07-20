@@ -6,11 +6,11 @@ const TextContainer = ({ users }) => (
         users
           ? (
             <div>
-              <h1>People currently chatting:</h1>
-              <div className="activeContainer">
-                <ul>
+              <div className="chat__member-container">
+                <h3>Member</h3>
+                <ul className="chat__member-list">
                   {users.map(({name}) => (
-                    <li key={name} className="activeItem">
+                    <li key={name} className="chat__member-item">
                         🙋{name}
                     </li>
                   ))}

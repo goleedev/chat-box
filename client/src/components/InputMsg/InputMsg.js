@@ -1,34 +1,18 @@
 import React from 'react';
 import { Form, Input, Button } from 'reactstrap';
 
-function InputMsg({setMessage, sendMessage, message}) {
-    const onInputChange = ({target: { value }}) => {
-        return setMessage(value)
-    }
-
-    const onInputEnter = (e) => {
-        return e.key === 'Enter' ? sendMessage(e) : null
-    }
-
-    const onSend = (e) => {
-        return sendMessage(e)
-    }
-
-    return (
-        <div>
-            <Form className="chat__form">
-                <Input
-                    type="text"
-                    name="inputmsg"
-                    id="chat__info"
-                    value={message}
-                    onChange={onInputChange}
-                    onKeyPress={onInputEnter}
-                    placeholder="Type Here..." />
-                <Button className="send" onClick={onSend}>Send</Button>
-            </Form>
-        </div>
-    )
-}
+const InputMsg = ({setMessage, sendMessage, message}) => (
+    <Form className="chat__form">
+        <Input
+            type="text"
+            name="inputmsg"
+            id="chat__info"
+            value={message}
+            onChange={({ target: { value } }) => setMessage(value)}
+            onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
+            placeholder="Type Here..." />
+        <Button className="send" onClick={e => sendMessage(e)}>Send</Button>
+    </Form>
+)
 
 export default InputMsg;

@@ -15,13 +15,12 @@
     justify-content: space-between;
     background: #FFFFFF;
     border-radius: 5px;
-    height: 60%;
-    width: 35%;
-    box-shadow:  3px 3px 2px #242424;
+    height: 80%;
+    width: 40%;
+    border: 2px solid #FFD437;
 }
 
 .chat__header {
-    width: 100%;
     text-align: center;
     color: #242424 !important;
     background-color: #ffffdd;
@@ -30,7 +29,9 @@
 .chat__header h2 {
     font-family: "Mark Pro Heavy";
     vertical-align: middle;
+    margin: 20px auto;
     padding: 0;
+    width: 50%;
     position: relative;
     left: -2% !important;
 }
@@ -72,10 +73,6 @@
     font-size: 1.2em;
 }
 
-input:focus, textarea:focus, select:focus{
-    outline: none;
-}
-
 /* Messages */
 .messages {
     padding: 5% 0;
@@ -84,10 +81,8 @@ input:focus, textarea:focus, select:focus{
 }
 
 .messageBox {
-    background: #F3F3F3;
     border-radius: 20px;
-    padding: 5px 20px;
-    color: white;
+    padding: 5px 10px;
     display: inline-block;
     max-width: 80%;
 }
@@ -96,22 +91,23 @@ input:focus, textarea:focus, select:focus{
     width: 100%;
     letter-spacing: 0;
     float: left;
-    font-size: 1.1em;
+    font-size: 1rem;
     word-wrap: break-word;
+    padding: 0;
 }
 
 .messageContainer {
-display: flex;
-justify-content: flex-end;
-padding: 0 5%;
-margin-top: 3px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px;
+    margin-top: 3px;
+    color: #242424;
 }
 
 .sentText {
     display: flex;
     align-items: center;
-    font-family: Helvetica;
-    color: #828282;
+    color: #242424;
     letter-spacing: 0.3px;
 }
 
@@ -131,14 +127,6 @@ margin-top: 3px;
     justify-content: flex-end;
 }
 
-.colorWhite {
-    color: white;
-}
-
-.colorDark {
-    color: #353535;
-}
-
 .backgroundYellow {
     background: #FFD437;
 }
@@ -148,13 +136,29 @@ margin-top: 3px;
 }
 
 /* Text Container */
-.activeContainer {
+.chat__member-container {
     align-items: left;
-    float: left;
     color: #242424;
+    width: 100%;
+    height: 80vh;
+    background-color: #ffffdd;
+    border: 2px solid #FFD437;
 }
   
-.activeItem {
-    display: flex;
-    align-items: center;
+.chat__member-list {
+    padding: 0;
+}
+
+.chat__member-container h3 {
+    width: 65%;
+    margin: 20px auto;
+    padding: 0 15px;
+    text-align: center;
+    background-color:#FFD437;
+}
+
+.chat__member-item {
+    list-style: none;
+    margin: 0;
+    padding: 0 15px;
 }
