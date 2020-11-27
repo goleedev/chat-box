@@ -150,8 +150,8 @@ GO Lee - [@golee.dev](https://www.instagram.com/golee.dev/) - golee.dev@gmail.co
 Project Link: [https://github.com/goleedev/ur-repo](https://github.com/goleedev/ur-repo)
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+<!-- See Also -->
+## See Also
 
 * [Netlify](https://docs.netlify.com/)
 * [query-string](https://github.com/sindresorhus/query-string#readme)
